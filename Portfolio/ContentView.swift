@@ -10,12 +10,12 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
     
-        ZStack{
-            Image("BGcolour")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .opacity(1)
-            
+//        ZStack{
+//            Image("BGcolour")
+//                .resizable()
+//                .aspectRatio(contentMode: .fill)
+        //                .opacity(1)
+//
             VStack(spacing:15){
                 Text("MY PORTFOLIO")
                     .font(.largeTitle)
@@ -26,13 +26,13 @@ struct ContentView: View {
                     .shadow(radius: 50)
                 
                 HStack {
-                    Text("College: SRM")
+                    Text("Name: Bob")
                         .font(.title2)
                         .fontWeight(.bold)
                         .padding(.trailing, 20.0)
                     
                    
-                    Text("Year: 1st")
+                    Text("Degree: M.Sc.")
                         .font(.title2)
                         .fontWeight(.bold)
                         .padding(.leading, 20.0)
@@ -65,7 +65,6 @@ struct ContentView: View {
                             
                         
                         Divider()
-                            .padding(/*@START_MENU_TOKEN@*/.trailing, 5.0/*@END_MENU_TOKEN@*/)
                             .frame(alignment: .leading)
                             .frame(width: 400, height: 3.0)
                             .overlay(.white)
@@ -89,14 +88,63 @@ struct ContentView: View {
                         .background(.clear)
                         .frame(width: 180.0, height: 200.0)
                         Divider()
-                            .padding(.leading, 5.0)
                             .frame(alignment: .leading)
                             .frame(width: 500, height: 3.0)
                             .overlay(.white)
                         .position(.zero)
                     }
                 }
-                
+                HStack{
+                    ScrollView {
+                        LazyVStack(alignment: .leading) {
+                            Text("Certifications")
+                                .font(.title)
+                                .fontWeight(.bold)
+                                .multilineTextAlignment(.center)
+                                .foregroundColor(.cyan)
+                            Text("AI")
+                            Text("ML")
+                            Text("Cybersecurity")
+                            Text("Data Science")
+                            Text("Quantum Computing")
+                            Text("Full Stack")
+                            Text("Game Dev")
+                            Text("App Dev")
+                            Text("Robotics")
+                        }}
+                        ScrollView {
+                            LazyVStack(alignment: .leading) {
+                                Text("Certifications")
+                                    .font(.title)
+                                    .fontWeight(.bold)
+                                    .multilineTextAlignment(.center)
+                                    .foregroundColor(.cyan)
+                                Text("AI")
+                                Text("ML")
+                                Text("Cybersecurity")
+                                Text("Data Science")
+                                Text("Quantum Computing")
+                                Text("Full Stack")
+                                Text("Game Dev")
+                                Text("App Dev")
+                                Text("Robotics")
+                            }
+                    }
+                    
+                    
+                }
+                .frame(width:200,height:200,alignment:.top)
+                HStack {
+                    Image("insta")
+                        .resizable()
+                        .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                        .frame(width: 50   , height: 50, alignment: .topTrailing)
+                    Image("linkdin")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                        .frame(width: 100   , height:50, alignment: .bottom)
+                }
                 
                     
                 }
@@ -108,10 +156,10 @@ struct ContentView: View {
                 
                 
             
-            .padding()
+          //  .padding()
             
         }
-}
+//}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
