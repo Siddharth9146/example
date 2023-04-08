@@ -9,13 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-    
-//        ZStack{
-//            Image("BGcolour")
-//                .resizable()
-//                .aspectRatio(contentMode: .fill)
-        //                .opacity(1)
-//
             VStack(spacing:15){
                 Text("MY PORTFOLIO")
                     .font(.largeTitle)
@@ -51,6 +44,8 @@ struct ContentView: View {
                             Text("C++")
                             Text("python")
                             Text("Front end ")
+                            Text("C#")
+                            Text("Swift")
                             
                                 
                                 
@@ -94,15 +89,18 @@ struct ContentView: View {
                         .position(.zero)
                     }
                 }
-                HStack{
+                HStack(){
+                    
+                    Spacer(minLength: 30)
                     ScrollView {
-                        LazyVStack(alignment: .leading) {
+                        VStack(alignment: .leading) {
                             Text("Certifications")
                                 .font(.title)
                                 .fontWeight(.bold)
                                 .multilineTextAlignment(.center)
                                 .foregroundColor(.cyan)
                             Text("AI")
+                            
                             Text("ML")
                             Text("Cybersecurity")
                             Text("Data Science")
@@ -111,10 +109,16 @@ struct ContentView: View {
                             Text("Game Dev")
                             Text("App Dev")
                             Text("Robotics")
+                            
                         }}
+                    .frame(width:180,height:150,alignment: .leading)
+                    .scrollIndicators(.visible)
+                    Divider()
+                        .padding(.all, 0.0)
+                        .frame(width: 0.0,height:150)
                         ScrollView {
-                            LazyVStack(alignment: .leading) {
-                                Text("Certifications")
+                            VStack(alignment: .leading) {
+                                Text("Projects")
                                     .font(.title)
                                     .fontWeight(.bold)
                                     .multilineTextAlignment(.center)
@@ -130,7 +134,9 @@ struct ContentView: View {
                                 Text("Robotics")
                             }
                     }
-                    
+                        .frame(width:180,height:150,alignment: .leading)
+                        .scrollIndicators(.visible)
+                        
                     
                 }
                 .frame(width:200,height:200,alignment:.top)
@@ -156,16 +162,16 @@ struct ContentView: View {
                 
                 
             
-          //  .padding()
+    
             
         }
-//}
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
             .preferredColorScheme(.dark)
-            .background( )
+            .background(Image("BGcolor"))
     }
 }
 
