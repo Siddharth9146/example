@@ -9,5 +9,4 @@ Once Xcode opens the project, select a simulator from the list of simulators ava
 Press the "Run" button or ⌘+R to run the project.
 Wait for Xcode to build the project and launch the simulator or your connected device.
 The app should launch automatically on the simulator or device.
-## Link to vid-
-https://drive.google.com/file/d/15RgueK_GoEVMH1E3KzAVh8KgyTauRgp6/view?usp=share_link
+
